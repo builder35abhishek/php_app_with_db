@@ -15,7 +15,7 @@ CREATE TABLE patients ( ID int, FirstName varchar(255), LastName varchar(255), A
 INSERT INTO patients (ID, FirstName, LastName, Address, Contact, MedicalIssue, RegDate) VALUES ('1', 'abc', 'zxc', 'pune','985241654','Spine','01/01/2021' );
 EOF
 
-sed -i "s|${db_ip}|my_host_ip|" index.php
-sed -i "s|${db_username}|my_user_name|" index.php
-sed -i "s|${db_password}|my_password|" index.php
-sed -i "s|${db_name}|my_db_name|" index.php
+sed -i "s|my_host_ip|${db_ip}|" index.php
+sed -i "s|my_user_name|${db_username}|" index.php
+sed -i "s|my_password|${db_password}|" index.php
+sed -i "s|my_db_name|${db_name}|" index.php
